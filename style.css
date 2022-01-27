@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #828282;
+    --secondColor: #2F80ED;
+}
+
+body {
+    background-color: rgba(29, 20, 20, 0.432);
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondColor);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+    background: #1f1f1f4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .logo span {
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.container .logo span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    width: 34px;
+    height: 34px;
+    box-sizing: border-box;
+    border: 5px solid #fd0797;
+    transform: translateY(-50%) rotate(45deg);
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    z-index: -1;
+}
+
+.container .signup-form {
+    width: 475px;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.356) 60%, rgba(0, 0, 0, 0.2) 80%);
+    background-size: cover;
+    border-radius: 10px;
+    padding: 35px;
+}
+
+.container .signup-form header {
+    margin-bottom: 28px;
+}
+
+.container .signup-form header h2 {
+    color: #f1f1f1;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: .5px;
+    font-weight: 700;
+}
+
+.container .signup-form header p {
+    color: #f1f1f1d3;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.container .signup-form form section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.container .signup-form form label {
+    height: 24px;
+    display: block;
+    color: #f0f0f0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.container .signup-form form input {
+    padding: 5px 3px;
+}
+
+.container .signup-form form input,
+.container .signup-form form select {
+    width: 100%;
+    border: 1px solid #201b1bdc;
+    border-color: transparent transparent #292626e0 transparent;
+}
+
+.container .signup-form form select {
+    color: rgb(43, 46, 46);
+    cursor: pointer;
+    padding: 4px;
+}
+
+.container .signup-form form input:focus,
+.container .signup-form form select:focus {
+    outline: none;
+}
+
+.container .signup-form form select.email input {
+    width: 100%;
+}
+
+.container .signup-form form section.name div {
+    width: calc(50% - 8px);
+}
+
+.container .signup-form form section.birth h3 {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--mainColor);
+    margin-bottom: 8px;
+}
+
+.container .signup-form form section.birth div {
+    width: calc((100% / 3) - 15px);
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .signup-form form section.terms {
+    margin-top: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    color: var(--mainColor);
+}
+
+.container .signup-form form section.terms p {
+    letter-spacing: .5px;
+}
+
+.container .signup-form form section.sign {
+    margin-top: 30px;
+}
+
+.container .signup-form form section.sign input {
+    width: fit-content;
+    font-size: 14px;
+    padding: 7px 14px;
+    line-height: 28px;
+    font-weight: 700;
+    background: var(--secondColor);
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-align: center;
+    transform: translateX(-50%);
+    margin-left: 50%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 820px) {
+    .container {
+        justify-content: center;
+    }
+
+    .container .logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container .signup-form {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
